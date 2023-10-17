@@ -9,8 +9,6 @@ services:
       - '27017:27017'
     volumes:
       - db_havaesh_mongo:/data/db
-    env_file:
-      - .env
     container_name: havaesh_mongo_container
 volumes:
   db_havaesh_mongo:

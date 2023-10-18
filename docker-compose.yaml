@@ -10,5 +10,14 @@ services:
     volumes:
       - db_havaesh_mongo:/data/db
     container_name: havaesh_mongo_container
+  backend:
+    build:
+      context: .
+      dockerfile: fastapi.dockerfile
+    ports:
+      - '8080:8080'
+    environment:
+      HAVAESH_MONGO_HOST: mongodb
+    container_name: havaesh_fastapi
 volumes:
   db_havaesh_mongo:

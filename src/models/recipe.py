@@ -9,7 +9,7 @@ class Amount(BaseModel):
 
 class Ingredient(BaseModel):
     name: str
-    amount: Optional[Amount]
+    amount: Optional[Amount] = None
 
 
 class Recipe(BaseModel):
